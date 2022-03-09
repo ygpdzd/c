@@ -36,5 +36,35 @@
     <ClCompile Include="Triangl.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CylindricalSurfaceArea.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMax.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Education.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AreYouPass.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ASCLL.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Function.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Equation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Weaks.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CountTheDay.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

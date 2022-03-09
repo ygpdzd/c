@@ -139,13 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AreYouPass.c" />
+    <ClCompile Include="ASCLL.c" />
+    <ClCompile Include="Calculation.c" />
+    <ClCompile Include="CountTheDay.c" />
+    <ClCompile Include="CylindricalSurfaceArea.c" />
     <ClCompile Include="Deposit.c" />
+    <ClCompile Include="Education.c" />
+    <ClCompile Include="Equation.c" />
+    <ClCompile Include="Function.c" />
     <ClCompile Include="Mainc.c" />
+    <ClCompile Include="FindMax.c" />
     <ClCompile Include="Reverse.c" />
     <ClCompile Include="StandardWeight.c" />
     <ClCompile Include="Temperature.c" />
     <ClCompile Include="ToggleCase.c" />
     <ClCompile Include="Triangl.c" />
+    <ClCompile Include="Weaks.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

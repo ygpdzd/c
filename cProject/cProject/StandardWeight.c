@@ -10,7 +10,7 @@ int weight()
 	int height = 0;
 	float weight = 0;
 	//A://跳转
-	printf("-------------------------------------------\nPlease input your height（cm）.\n");
+	printf("----------------计算标准体重---------------\nPlease input your height（cm）.\n");
 	fflush(stdin);//清除缓存
 	scanf("%d",&height);
 	printf("Please tell me your gender.\n(You can use 0 for female and 1 for male)\n");
@@ -34,7 +34,7 @@ int weight()
 		printf("Your gender was not detected.\n");
 	}
 	printf("Your standard weight is %g Kg\n", weight);
-	printf("-------------------------------------------\n");
+	printf("------------------------------------------\n");
 	//goto A;//跳转
 	//清空输入
 	strcpy(input , "\0");

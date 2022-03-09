@@ -2,8 +2,8 @@
 #include<stdio.h>
 int toggleCase()
 {
+	printf("----------------大小写转换----------------\n");
 	char a;
-
 	printf("请输入一个大写字母：");
     A:
 	fflush(stdin);
@@ -19,5 +19,6 @@ int toggleCase()
 		a = a + 32;
 		printf("成功转换： %c \n", a);
 	}
+	printf("------------------------------------------\n");
 	return 0;
 }
