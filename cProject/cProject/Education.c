@@ -5,7 +5,13 @@ int education()
 	int years;
 	printf("------------------求学历-------------------\n");
 	printf("你上学几年了？");
-	scanf("%[1234567890]", &years);
+	setbuf(stdin, NULL);//清空缓存区
+	if (scanf("%[1234567890]", &years) != 1||years < 0)
+	{
+		setbuf(stdin, NULL);//清空缓存区
+		printf("输入错误");
+		return 0;
+	} 
 	printf("没跳过级的话，");
 	if (years <= 6)
 		printf("那你应该是小学生，也就是小学学历。");
@@ -21,6 +27,5 @@ int education()
 	{
 		printf("6666666666");
 	}
-	printf("------------------------------------------\n");
 	return 0;
 }

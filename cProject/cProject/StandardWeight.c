@@ -3,42 +3,38 @@
 #include<string.h>
 int weight()
 {
-	//输入的字符
-	char input[] = "\0";
-
 	//身高
-	int height = 0;
+	int height= 0,input;
 	float weight = 0;
 	//A://跳转
 	printf("----------------计算标准体重---------------\nPlease input your height（cm）.\n");
-	fflush(stdin);//清除缓存
-	scanf("%d",&height);
+	while (scanf("%d", &height) != 1)
+	{
+		setbuf(stdin, NULL);//清空缓存区
+	}
 	printf("Please tell me your gender.\n(You can use 0 for female and 1 for male)\n");
-	fflush(stdin);//清除缓存
-	scanf("%s", &input);
-	if (strstr(input, "man") != NULL || strstr(input,"男") != NULL || strstr(input, "boy") != NULL||strstr(input,"xiong") != NULL || strstr(input,"雄") != NULL ||strstr(input,"1") != NULL|| strstr(input, "male") != NULL)
+	setbuf(stdin, NULL);//清空缓存区
+	scanf("%d", &input);
+	if (input == 1)
 	{
 		//男生
 		printf("You are boy.\n");
-		weight = (height - 80) * 0.7;
+		weight = (height - 80) * 0.7; 
+		printf("Your standard weight is %g Kg", weight);
 	}
-	else if (strstr(input, "女") != NULL || strstr(input, "woman") != NULL|| strstr(input, "雌") != NULL || strstr(input, "female") != NULL|| strstr(input, "daughter") != NULL || strstr(input, "girl") != NULL|| strstr(input, "0") != NULL)	
+	else if (input == 0)	
 	{
 		//女生
 		printf("You are gril.\n");
 		weight = (height - 70) * 0.6;
+		printf("Your standard weight is %g Kg", weight);
 	}
 	else 
 	{
 		//未检测到
-		printf("Your gender was not detected.\n");
+		printf("Your gender was not detected.");
+		return 0;
 	}
-	printf("Your standard weight is %g Kg\n", weight);
-	printf("------------------------------------------\n");
 	//goto A;//跳转
-	//清空输入
-	strcpy(input , "\0");
-	height = 0;
-	weight = 0;
 	return 0;
 }

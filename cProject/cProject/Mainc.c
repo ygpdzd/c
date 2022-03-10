@@ -22,20 +22,26 @@ int countTheDay();//n天之后周几
 #pragma endregion
 int main()
 {
-	int i = -1;
+	int i = -1,j = 0;
    B:
 	i = -1;
 	printf("-------------------菜单-------------------\n ");
 	printf("0:退出\n 1.求三角形面积\n 2.华氏度转摄氏度\n 3.计算利息\n 4.逆序输出四位数\n 5.求圆柱表面积\n 6.计算标准体重\n 7.大小写转换\n 8.两值求最大\n 9.算学历\n 10.挂了吗\n 11.ASCLL码\n 12.计算机\n 13.分段函数\n 14.求解二元一次方程\n 15.跟你说星期几\n 16.n天之后星期几\n 请选择：");
-	rewind(stdin);//建立新缓存区
-	setbuf(stdin, NULL);//设置缓存为空
-	fflush(stdin);//清除缓存,防止scanf被忽略??无用
-	getchar();//拿走一个字符
-	scanf("%d", &i);
-	rewind(stdin);//建立新缓存区
-	setbuf(stdin, NULL);//设置缓存为空
-	fflush(stdin);//清除缓存,防止scanf被忽略??无用
-	getchar();//拿走一个字符
+	while ( scanf("%d", &i) != 1)
+	{	
+		setbuf(stdin, NULL);//清空缓存区
+		//fflush(stdin);//清除缓存区（c标准库没有定义此函数）
+		//printf("\n");//死循环判断
+		//printf(" 无效,请重新输入：\n");
+	}
+	//while (feof(stdin) || ferror(stdin)) { 
+	//	/* 如果用户输入文件结束标志（或文件已被读完）， */
+	//	/* 或者发生读写错误，则退出循环*/
+	//	/* do something */
+	//	setbuf(stdin, NULL);//清空缓存区
+	//	printf("  输入错误，请重新输入。\n");
+	//	break;
+	//}
 	switch (i)
 	{
 	case 0:
@@ -95,8 +101,9 @@ int main()
 	
 	i = -1;
 
-	printf("已暂停，");
+	printf("\n已暂停，");
 	system("pause");
+	printf("\n------------------------------------------\n");
 	goto B;
 	return 0;
 }

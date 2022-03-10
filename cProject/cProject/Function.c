@@ -6,7 +6,11 @@ int function()
 	float x,y;
 	printf("----------------分段函数----------------\n");
 	printf("输入一个x\n");
-	scanf("%f", &x);
+	if (scanf("%f", &x) != 1)
+	{
+		printf("输入错误");
+		return 0;
+	}
 	if (x < -1)
 	{
 		y = 2 - x;
@@ -24,8 +28,7 @@ int function()
 		printf("输入错误");
 		return 0;
 	}
-	printf("y 的值为：%g\n", y);
-	printf("----------------------------------------\n");
+	printf("y 的值为：%g", y);
 
 	return 0;
 }

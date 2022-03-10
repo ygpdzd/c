@@ -2,11 +2,16 @@
 #include<stdio.h>
 int calculate()
 {
-	int a, c, d;
-	char b;
+	int a = 0, c = 0, d = 0;
+	char b = "";
 	printf("-------------------计算-------------------\n");
 	printf("请从键盘依次输入一个整数，一个运算符，一个整数,\n用回车分开。\n");
-	scanf("%d %c %d", &a, &b, &c);
+	if (scanf("%d %c %d", &a, &b, &c) != 3)//必要的空格，防止有 输入 被吞
+	{
+		setbuf(stdin, NULL);//清空缓存区
+		printf("输入错误");
+		return 0;
+	}
 	switch (b)
 	{
 	case 42 :
@@ -25,9 +30,9 @@ int calculate()
 		d = a / c;
 		break;
 	default:
-		break;
+		printf("输入错误");
+		return 0;
 	}
-	printf("结果为：%d \n", d);
-	printf("----------------------------------------\n");
+	printf("结果为：%d", d);
 	return 0;
 }

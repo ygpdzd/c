@@ -6,19 +6,21 @@ int toggleCase()
 	char a;
 	printf("请输入一个大写字母：");
     A:
-	fflush(stdin);
+	setbuf(stdin, NULL);//清空缓存区
 	getchar();
-	scanf("%c", &a); 
-	if (a < 64 && a > 91)
+	if ( scanf("%c", &a) != 1 || a < 64 && a > 91)
 	{
-		printf("输入错误请重新输入。\n");
-		goto A;
+		setbuf(stdin, NULL);//清空缓存区
+		printf("输入错误");
+		fflush(stdin);
+	    getchar();
+		return 0;
+		//goto A;
 	}
 	else
 	{
 		a = a + 32;
-		printf("成功转换： %c \n", a);
+		printf("成功转换： %c ", a);
 	}
-	printf("------------------------------------------\n");
 	return 0;
 }

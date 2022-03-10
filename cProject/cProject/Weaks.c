@@ -3,9 +3,14 @@
 int weaks()
 {
 	int a;
-	printf("------------------ASCLL码-----------------\n");
+	printf("------------------说星期几-----------------\n");
 	printf("说个数,1到7\n");
-	scanf("%d", &a);
+	if (scanf("%d", &a) != 1)
+	{
+		setbuf(stdin, NULL);//清空缓存区
+		printf("输入错误");
+		return 0;
+	}
 	switch (a)
 	{
 	case 1:
@@ -32,6 +37,5 @@ int weaks()
 	default:
 		break;
 	}
-	printf("\n------------------------------------------\n");
 	return 0;
 }

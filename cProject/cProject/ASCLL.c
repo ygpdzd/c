@@ -8,9 +8,9 @@ int ASCLL()
 	scanf("%d", &a);
 	if (a > 254 && a < 31)
 	{
-		printf("仅支持32到254\n");
+		printf("仅支持32到254");
+		return 0;
 	}
-	printf("ASCLL码为 %d : %c\n", a,a);
-	printf("------------------------------------------\n");
+	printf("ASCLL码为 %d : %c", a,a);
 	return 0;
 }
